@@ -11,7 +11,16 @@ def get(array, index, default=None):
     :param default: значение по-умолчанию.
     :return: значение по индексу или значение по-умолчанию.
     """
-    if index < 0:
+    if type(array) is not list:
+        return "Данные должны быть в формате списка!"
+
+    elif type(index) is not int:
+        return "Индекс должен быть целым числом!"
+
+    elif int(index) < 0:
+        return "Индекс должен быть неотрицательным числом!"
+
+    elif index not in range(len(array)):
         return default
 
     return array[index]
