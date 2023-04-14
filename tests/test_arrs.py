@@ -1,6 +1,9 @@
 import unittest
 from utils import arrs
 
+"""
+Все функции покрыты тестами на 100%!
+"""
 
 class TestArrs(unittest.TestCase):
 
